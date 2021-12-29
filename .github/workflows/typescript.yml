@@ -10,7 +10,7 @@ jobs:
 
     steps:
 
-      - run: Install TypeScript via PowerShell
+      - name: Install TypeScript via PowerShell
 
         run: choco install typescript
 
