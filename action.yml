@@ -1,3 +1,10 @@
+### TypeScript requires Node.js, which
+### Chocolatey will install before TS.
+### Learn more: typescriptlang.org/docs
+
+
+
+
 name: Setup TypeScript
 
 on: push
@@ -13,5 +20,3 @@ jobs:
       - run: Install TypeScript via PowerShell
         run: choco install typescript
 
-      - name: Get version
-        run: typescript version
