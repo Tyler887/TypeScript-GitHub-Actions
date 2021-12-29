@@ -1,10 +1,10 @@
 ### TypeScript requires Node.js, which
 ### Chocolatey will install before TS.
-### Learn more: https://typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+### Help: https://typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
-
-
-
+### By using this Action, you agree to
+### the terms of the Apache License 2.0.
+### apache.org/licenses/LICENSE-2.0.txt
 name: Setup TypeScript
 description: Setup TypeScript along with Node.js and add them to the PATH
 branding:
