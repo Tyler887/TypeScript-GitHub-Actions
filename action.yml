@@ -1,0 +1,17 @@
+name: Setup TypeScript
+
+on: push
+
+jobs:
+
+  install:
+
+    runs-on: windows-2022
+
+    steps:
+
+      - run: Install TypeScript via PowerShell
+        run: choco install typescript
+
+      - name: Get version
+        run: typescript version
