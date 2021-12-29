@@ -7,6 +7,10 @@
 
 name: Setup TypeScript
 description: Setup TypeScript along with Node.js and add them to the PATH
+branding:
+  icon: 'box'
+  color: 'white'
+
 on: push
 
 jobs:
