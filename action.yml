@@ -6,7 +6,7 @@
 
 
 name: Setup TypeScript
-
+description: Setup TypeScript along with Node.js and add them to the PATH
 on: push
 
 jobs:
