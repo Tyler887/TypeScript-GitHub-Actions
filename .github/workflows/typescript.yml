@@ -12,6 +12,6 @@ jobs:
 
       - name: Install TypeScript via PowerShell
 
-        run: choco install typescript
+        run: choco install nodejs typescript
 
 
