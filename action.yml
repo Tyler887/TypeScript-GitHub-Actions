@@ -22,5 +22,5 @@ jobs:
     steps:
 
       - run: Install TypeScript via PowerShell
-        run: choco install nodejs typescript
+        run: choco install typescript
 
