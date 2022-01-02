@@ -22,7 +22,7 @@ jobs:
 
   install:
 
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: windows-${{ matrix.os }}
 
     
 
@@ -30,11 +30,10 @@ jobs:
 
          matrix:
 
-            os: ['windows', 'macos', 'ubuntu']
-            command: ['choco install typescript', 'brew install typescript', 'brew install typescript']
-
+            os: ['2022', '2019', '2016']
+            
     steps:
 
-      - run: ${{ matrix.command }}
+      - run: choco install typescript
 
 
