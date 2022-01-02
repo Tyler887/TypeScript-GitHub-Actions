@@ -21,10 +21,10 @@ jobs:
     
     strategy:
       matrix:
-        typescript: ['
+        typescript: ['4.5', '4.2', '3.5']
 
     steps:
 
-      - run: Install TypeScript via PowerShell
-        run: choco install typescript
+      - run: Install TypeScript ${{ matrix.typescript }} via PowerShell
+        run: choco install typescript ${{ matrix.typescript }}
 
