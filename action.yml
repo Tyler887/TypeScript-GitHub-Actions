@@ -18,6 +18,10 @@ jobs:
   install:
 
     runs-on: windows-2022
+    
+    strategy:
+      matrix:
+        typescript: ['
 
     steps:
 
