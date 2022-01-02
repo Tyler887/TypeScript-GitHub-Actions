@@ -34,7 +34,7 @@ jobs:
 
     steps:
 
-      - run: Install TypeScript ${{ matrix.typescript }} via PowerShell
+      - name: Install TypeScript ${{ matrix.typescript }} via PowerShell
 
         run: choco install typescript ${{ matrix.typescript }}
 
