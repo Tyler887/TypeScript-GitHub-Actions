@@ -26,5 +26,5 @@ jobs:
     steps:
 
       - run: Install TypeScript ${{ matrix.typescript }} via PowerShell
-        run: choco install typescript ${{ matrix.typescript }}
+        run: choco install typescript ${{ matrix.typescript }} --Force
 
