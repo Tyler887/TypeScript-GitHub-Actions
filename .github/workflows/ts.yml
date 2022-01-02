@@ -22,7 +22,7 @@ jobs:
 
   install:
 
-    runs-on: windows-${{ matrix.windows }}
+    runs-onwindows-latest
 
     
 
