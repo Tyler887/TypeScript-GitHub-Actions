@@ -1,0 +1,40 @@
+### TypeScript requires Node.js, which
+
+### Chocolatey will install before TS.
+
+### Help: https://typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+
+### By using this Action, you agree to
+
+### the terms of the Apache License 2.0.
+
+### apache.org/licenses/LICENSE-2.0.txt
+
+name: Setup TypeScript
+
+
+
+
+
+on: push
+
+jobs:
+
+  install:
+
+    runs-on: windows-${{ matrix.windows }}
+
+    
+
+    strategy:
+
+      matrix:
+
+        typescript: ['4.5', '4.2', '3.5']
+
+    steps:
+
+      - run: Install TypeScript ${{ matrix.typescript }} via PowerShell
+
+        run: choco install typescript ${{ matrix.typescript }}
+
