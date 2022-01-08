@@ -42,5 +42,11 @@ jobs:
         run: |
           cd %CURRENTUSER%
           Get-Content chocolatey.log
+      - name: Upload log
+        uses: actions/upload-artifact@v2
+        with:
+          name: choco-logs
+          path: chocolatey.log
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
 
