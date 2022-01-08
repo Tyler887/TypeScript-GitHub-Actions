@@ -34,6 +34,10 @@ jobs:
             
     steps:
 
-      - run: choco install typescript --allow-unofficial --accept-license
+      - run: choco install typescript --allow-unofficial --no-progress
+      
+      - name: Come up with the logs
+      
+        run: Get-Content chocolatey.log
 
 
