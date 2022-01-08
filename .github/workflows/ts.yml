@@ -34,10 +34,13 @@ jobs:
             
     steps:
 
-      - run: choco install typescript --allow-unofficial --no-progress
+      - name: Install using choco
+        run: choco install typescript --allow-unofficial --no-progress --log-file=%CURRENTUSER%/chocolatey.log
       
       - name: Come up with the logs
       
-        run: Get-Content chocolatey.log
+        run: |
+          cd %CURRENTUSER%
+          Get-Content chocolatey.log
 
 
