@@ -35,19 +35,19 @@ jobs:
     steps:
 
       - name: Install using choco
-        run: choco install typescript --allow-unofficial --no-progress --log-file=%CURRENTUSER%/chocolatey.log
+        run: choco install typescript --allow-unofficial --no-progress --log-file=C:zchocolatey.log
       
       - name: Come up with the logs
       
         run: |
-          cd %CURRENTUSER%
+          cd C:\
           Get-Content chocolatey.log
        
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
           name: choco-logs-%RANDOM%%RANDOM%%RANDOM%%RANDOM%
-          path: %CURRENTUSER%\chocolatey.log
+          path: C:\chocolatey.log
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
 
