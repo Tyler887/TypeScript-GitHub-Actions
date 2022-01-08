@@ -47,7 +47,7 @@ jobs:
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
-          name: choco-logs-${{ runner.temp }}
+          name: choco-logs-w${{ matrix.os }}
           path: C:\chocolatey.log
           if-no-files-found: error
 
