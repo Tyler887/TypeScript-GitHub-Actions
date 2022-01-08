@@ -42,7 +42,7 @@ jobs:
         run: |
           cd %CURRENTUSER%
           Get-Content chocolatey.log
-       env
+       
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
