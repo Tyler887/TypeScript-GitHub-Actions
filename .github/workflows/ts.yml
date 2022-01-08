@@ -40,8 +40,9 @@ jobs:
       - name: Come up with the logs
       
         run: |
-          cd C:\
+          cd \
           Get-Content chocolatey.log
+          echo "End of choco log. Next step will upload this log to github servers as an artifact"
        
       - name: Upload log
         uses: actions/upload-artifact@v2
