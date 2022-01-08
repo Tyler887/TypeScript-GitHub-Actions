@@ -35,12 +35,12 @@ jobs:
     steps:
 
       - name: Install using choco
-        run: choco install typescript --allow-unofficial --no-progress --log-file=C:zchocolatey.log
+        run: choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
       
       - name: Come up with the logs
       
         run: |
-          cd \
+          cd C:\
           Get-Content chocolatey.log
           echo "End of choco log. Next step will upload this log to github servers as an artifact"
        
@@ -49,6 +49,6 @@ jobs:
         with:
           name: choco-logs-%RANDOM%%RANDOM%%RANDOM%%RANDOM%
           path: C:\chocolatey.log
-          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+          if-no-files-found: error
 
 
