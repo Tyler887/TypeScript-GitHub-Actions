@@ -43,7 +43,7 @@ jobs:
       
         run: |
           cd C:\
-          echo --warning "The log may contain sensitive information. By viewing the log you confirm you are not attemptng to hack (e.g. uninstalling Node.js or TypeScript)".
+          echo ::warning "The log may contain sensitive information. By viewing the log you confirm you are not attemptng to hack (e.g. uninstalling Node.js or TypeScript)".
           Get-Content chocolatey.log
        
       - name: Upload log
