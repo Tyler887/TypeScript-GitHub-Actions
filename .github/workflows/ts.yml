@@ -35,7 +35,9 @@ jobs:
     steps:
 
       - name: Install using choco
-        run: choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
+        run: |
+         choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
+         refreshenv
       
       - name: Come up with the logs
       
