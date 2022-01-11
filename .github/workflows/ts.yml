@@ -45,7 +45,6 @@ jobs:
           cd C:\
           echo --warning "This log may contain sensitive information. By viewing the log you confirm you are not attemptng to hack (e.g. uninstalling Node.js or TypeScript).
           Get-Content chocolatey.log
-          echo "End of choco log. Next step will upload this log to github servers as an artifact"
        
       - name: Upload log
         uses: actions/upload-artifact@v2
