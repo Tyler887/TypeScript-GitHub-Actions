@@ -46,15 +46,15 @@ jobs:
          echo "Pre-installed Tools: ${{ runner.tool_cache	}}"
          echo "::endgroup::"
          choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
+         echo "::notice::Process Completed."
          cd C:\
          echo "::group::Detailed logs"
          echo "Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
          echo "--------------------------------------------------------------------------------------------------------------"
          Get-Content chocolatey.log
          echo "::endgroup::"
-         echo "::echo:off::"
-         refreshenv
-         echo "::echo:on::"
+      - name: Refresh env. registry for CMD
+        run: refreshenv
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
