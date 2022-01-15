@@ -52,8 +52,9 @@ jobs:
          echo "--------------------------------------------------------------------------------------------------------------"
          Get-Content chocolatey.log
          echo "::endgroup::"
+         echo "::echo:off::"
          refreshenv
-       
+         echo "::echo:on::
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
