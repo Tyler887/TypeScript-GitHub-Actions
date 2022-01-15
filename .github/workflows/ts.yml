@@ -47,7 +47,9 @@ jobs:
          choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
          cd C:\
          echo "::group::Detailed logs"
-         echo "::warning::Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
+         echo "::group::Warning"
+         echo "Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
+         echo "::endgroup::"
          Get-Content chocolatey.log
          echo "::endgroup::"
          refreshenv
