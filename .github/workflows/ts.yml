@@ -38,13 +38,11 @@ jobs:
         run: |
          choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
          refreshenv
-      
-      - name: Come up with the logs
-      
-        run: |
-          cd C:\
-          echo "::warning::The log may contain sensitive information. By viewing the log you confirm you are not attempting to hack (e.g. uninstalling Node.js or TypeScript).".
-          Get-Content chocolatey.log
+         cd C:\
+         echo "::group::Detailed logs"
+         echo "::warning::Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
+         Get-Content chocolatey.log
+         echo "::endgroup::"
        
       - name: Upload log
         uses: actions/upload-artifact@v2
