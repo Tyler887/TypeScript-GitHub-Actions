@@ -40,7 +40,7 @@ jobs:
          echo "This process takes a few seconds to complete. It installs the typescript NuGet Package by using a Windows package manager called Chocolatey (choco for short)."
          echo "::endgroup::"
          echo "::group::GitHub runner info"
-         echo "Microsoft Windows Server ${{ matrix.os }} running on ${{ runner.name }}."
+         echo "Microsoft Windows Server ${{ matrix.os }} running on the ${{ runner.name }} runner."
          echo "Architecture: ${{ runner.arch }}"
          echo "Pre-installed Tools: ${{ runner.tool_cache	}}"
          echo "::endgroup::"
