@@ -47,7 +47,7 @@ jobs:
          echo "::endgroup::"
          choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log --yes
          if($LASTEXITCODE -NE 0) {
-            echo "::notice title=Windows Server ${{ matrix.os }}::Completed installation unsucessfully. Exit code $LASTEXITCODE."
+            echo "::error title=Windows Server ${{ matrix.os }}::Completed installation unsucessfully. Exit code $LASTEXITCODE."
          }else {
            echo "::notice title=Windows Server ${{ matrix.os }}::Completed installation sucessfully."
          }
