@@ -37,7 +37,7 @@ jobs:
       - name: Install using choco
         run: |
          echo "::group::How the process works"
-         echo "This process takes a few seconds to complete. It installs the typescript NuGet Package by using a Windows package manager called Chocolatey ("choco" for short).
+         echo "This process takes a few seconds to complete. It installs the typescript NuGet Package by using a Windows package manager called Chocolatey ("choco" for short)."
          echo "::endgroup::"
          choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log
          refreshenv
