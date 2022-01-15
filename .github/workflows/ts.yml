@@ -23,6 +23,7 @@ jobs:
   install:
 
     runs-on: windows-${{ matrix.os }}
+    timeout-minutes: 10
 
     
 
