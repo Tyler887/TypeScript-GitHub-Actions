@@ -45,8 +45,8 @@ jobs:
          echo "Architecture: ${{ runner.arch }}"
          echo "Pre-installed Tools: ${{ runner.tool_cache	}}"
          echo "::endgroup::"
-         choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log --yes ::debug::--debug
-         echo "::notice title=Windows Server ${{ matrix.os }}::Process Completed."
+         choco install typescript --allow-unofficial --no-progress --log-file=C:chocolatey.log --yes
+         echo "::notice title=Windows Server ${{ matrix.os }}::Completed installation - exit code $LASTEXITCODE."
          cd C:\
          echo "::group::Detailed logs"
          echo "Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
