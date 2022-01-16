@@ -51,13 +51,13 @@ jobs:
          }else {
            echo "::notice title=Windows Server ${{ matrix.os }}::Completed installation sucessfully."
          }
-         Exit $LASTEXITCODE
          cd C:\
          echo "::group::Detailed logs"
          echo "Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
          echo "--------------------------------------------------------------------------------------------------------------"
          Get-Content chocolatey.log
          echo "::endgroup::"
+         Exit $LASTEXITCODE
       - name: Refresh env. registry for CMD
         run: refreshenv
       - name: Upload log
