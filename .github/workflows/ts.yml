@@ -39,6 +39,7 @@ jobs:
 
       - name: Install using choco
         run: |
+         echo "::notice title="Chocolatey"::Install ready."
          echo "::group::How the process works"
          choco install typescript --what-if --no-progress
          echo "::endgroup::"
