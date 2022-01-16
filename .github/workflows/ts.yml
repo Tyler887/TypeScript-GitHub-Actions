@@ -56,7 +56,7 @@ jobs:
          }
          cd C:\
          echo "::group::Detailed logs"
-         echo "Stop! This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
+         Show-Markdown "**Stop!** This log is for developers only. Do not share any sensitive information since hackers could gain access to your GitHub account."
          echo "--------------------------------------------------------------------------------------------------------------"
          Get-Content chocolatey.log
          echo "::endgroup::"
