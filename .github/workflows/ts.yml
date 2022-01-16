@@ -63,8 +63,8 @@ jobs:
       - name: Refresh env. registry for CMD
         run: refreshenv
       - run: |
-         choco uninstall nodejs-lts
-         choco install nodejs
+         choco uninstall nodejs-lts --no-progress
+         choco install nodejs --no-progress --allow-unofficial
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
