@@ -1,6 +1,8 @@
-### TypeScript requires Node.js, which
+### TypeScript installs with Node.js, which
 
 ### Chocolatey will install before TS.
+
+### The end will upgrade Node from LTS to STS.
 
 ### Help: https://typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
@@ -60,6 +62,9 @@ jobs:
          Exit $LASTEXITCODE
       - name: Refresh env. registry for CMD
         run: refreshenv
+      - run: |
+         choco uninstall nodejs-lts
+         choco install nodejs
       - name: Upload log
         uses: actions/upload-artifact@v2
         with:
